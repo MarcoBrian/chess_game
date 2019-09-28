@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 @app.route('/chessgame', methods=['POST'])
 def evaluate():
     data = request.get_json();
+    print(data)
     logging.info("data sent for evaluation {}".format(data))
     inputValue = data.get("input");
     result = chess(inputValue)
